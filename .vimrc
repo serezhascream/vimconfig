@@ -50,6 +50,7 @@ set infercase
 set laststatus=2
 set title
 set wildmenu
+set wildignore+=*/min/*,*/vendor/*,*/node_modules/*,*/bower_components/*,*/dictionaries/*,*/dist_version/*,*/sitestatic/*
 " set autochdir
 set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:p:h\")})%)%(\ %a%)\ -\ %{v:servername} titlelen=0
 set titleold=
