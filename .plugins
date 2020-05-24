@@ -5,33 +5,21 @@ call vundle#begin()
 " ####### Plugins list
 Plugin 'groenewege/vim-less'
 Plugin 'ap/vim-css-color'
-Plugin 'preservim/nerdtree'
 Plugin 'w0rp/ale'
 Plugin 'airblade/vim-gitgutter'
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'tyrannicaltoucan/vim-quantum'
+Plugin 'morhetz/gruvbox'
 
+" Plugin 'preservim/nerdtree'
+" Plugin 'tyrannicaltoucan/vim-quantum'
 " Plugin 'shougo/neocomplete.vim'
 " Plugin 'tpope/vim-surround'
 " Plugin 'kien/ctrlp.vim'
 
 call vundle#end() 
 filetype plugin indent on
-
-" ####### VUNDLE ENDS
-
-" ### ALE
-let b:ale_linters = ['eslint']
-let g:ale_sign_error = 'Ø'
-let g:ale_echo_msg_error_str = 'E'
-let g:ale_echo_msg_warning_str = 'W'
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-let g:ale_fixers = {
-\	'javascript': ['prettier']
-\}
-let g:ale_fix_on_save = 1
 
 " ####### AUTOCOMPLETE
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -45,31 +33,14 @@ set guioptions-=e
 set wildmenu
 set wildignore+=*/tmp/*,*/log/*,*/public/sitestatics/*,*/public/img/*,*/public/fonts
 
-
 " # GITGUTTER
 let g:gitgutter_grep     = ''
 let g:gitgutter_map_keys = 0
 
-" # NERDTREE
-let g:NERDTreeDirArrows = 1
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
-let g:NERDTreeGlyphReadOnly = "RO"
-let g:NERDTreeNodeDelimiter = "\u00a0"
-map <C-n> :NERDTreeToggle<CR>
-
-" # CTRLP
-let g:ctrlp_working_path_mode = 'r'
-let g:ctrlp_max_files=10
-let g:ctrlp_max_depth=40
-let g:ctrlp_match_window = 'min:4,max:10'
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
-let specificProjectIgnorePaths = "snapshots|tests|dist-version|public/css|public/publishBackups|public/sitestatics|public/sitesomains|public/uploads|public/uploads_removed"
-let g:ctrlp_custom_ignore = {
-    \   'dir' : '.git$|build$|tmp|DS_Store|bower_components|node_modules|dist|target|' . specificProjectIgnorePaths,
-    \     'file' : '\v.(exe|dll|lib|so|swp|zip)$'
-    \ }
-let g:ctrlp_working_path_mode = 'rc'
-
+runtime .plugin_configs/.ale
 runtime .plugin_configs/.airline
-" runtime .plugin_configs/.neocomplete
+runtime .plugin_configs/.netrw
+
+" ### enable gruvbox
+autocmd vimenter * colorscheme gruvbox
+autocmd vimenter * AirlineRefresh
