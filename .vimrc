@@ -36,6 +36,7 @@ set noswapfile
 set nobackup
 set nofoldenable
 set completeopt=longest,menuone
+set signcolumn="yes"
 set wrap
 set wrapscan
 set imsearch=0
