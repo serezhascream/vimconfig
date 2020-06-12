@@ -7,10 +7,10 @@ Plugin 'groenewege/vim-less'
 Plugin 'ap/vim-css-color'
 Plugin 'w0rp/ale'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'arcticicestudio/nord-vim'
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'morhetz/gruvbox'
 
 " Plugin 'preservim/nerdtree'
 " Plugin 'tyrannicaltoucan/vim-quantum'
@@ -41,6 +41,4 @@ runtime .plugin_configs/.ale
 runtime .plugin_configs/.airline
 runtime .plugin_configs/.netrw
 
-" ### enable gruvbox
-autocmd vimenter * colorscheme gruvbox
-autocmd vimenter * AirlineRefresh
+colorscheme nord
