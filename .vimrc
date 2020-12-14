@@ -6,8 +6,8 @@ set nocompatible
 filetype plugin on
 set path+=**
 
-runtime .plugins
-runtime .snippetlist
+runtime plugins
+runtime snippetlist
 
 set backspace=indent,eol,start
 set linebreak

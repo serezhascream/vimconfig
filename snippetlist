@@ -1,0 +1,3 @@
+nnoremap ,arrow :read $HOME/.vim/snippets/arrow.js<CR>
+nnoremap ,react :-1read $HOME/.vim/snippets/react.js<CR>
+nnoremap ,vue :-1read $HOME/.vim/snippets/vue.vue<CR>

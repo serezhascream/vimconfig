@@ -12,9 +12,10 @@ Plugin 'arcticicestudio/nord-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+Plugin 'shougo/neocomplete.vim'
+
 " Plugin 'preservim/nerdtree'
 " Plugin 'tyrannicaltoucan/vim-quantum'
-" Plugin 'shougo/neocomplete.vim'
 " Plugin 'tpope/vim-surround'
 " Plugin 'kien/ctrlp.vim'
 
@@ -37,8 +38,9 @@ set wildignore+=*/tmp/*,*/log/*,*/public/sitestatics/*,*/public/img/*,*/public/f
 let g:gitgutter_grep     = ''
 let g:gitgutter_map_keys = 0
 
-runtime .plugin_configs/.ale
-runtime .plugin_configs/.airline
-runtime .plugin_configs/.netrw
+runtime plugin_configs/ale
+runtime plugin_configs/airline
+runtime plugin_configs/netrw
+runtime plugin_configs/neocomplete
 
 colorscheme nord
